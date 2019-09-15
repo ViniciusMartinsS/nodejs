@@ -11,8 +11,6 @@ module.exports.fileListener = async () => {
       console.dir(response, { depth: null })
     }
   } catch (err) {
-    const error = err && err.message || err
-    console.error('While listening files an error has occurred,', error)
     throw err
   }
 }
