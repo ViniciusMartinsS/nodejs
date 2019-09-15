@@ -1,8 +1,7 @@
 'use strict'
 
 const { readFileSync } = require('fs')
-const prefix = `${__dirname}/../assets`
-const files = [ `tsk_first.txt`, `tsk_second.txt` ]
+const { files, prefix } = require('./fields')
 
 module.exports.fileListener = async () => {
   try {
@@ -13,6 +12,7 @@ module.exports.fileListener = async () => {
     }
   } catch (err) {
     const error = err && err.message || err
-    console.error('While listening files an error has occurred, ', error)
+    console.error('While listening files an error has occurred,', error)
+    throw err
   }
 }

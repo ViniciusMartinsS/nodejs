@@ -1,11 +1,7 @@
 'use strict'
 
 const { appendFileSync, existsSync, renameSync } = require('fs')
-
-const prefix = `${__dirname}/../assets`
-const files = [ `tsk_first.txt`, `tsk_second.txt` ]
-const renamed = [ `tsk_firstRenamed.txt`, `tsk_secondRenamed.txt` ]
-
+const { files, prefix, renamed } = require('./fields')
 const fileErr = { status: false, message: 'File does not exist!' }
 
 module.exports.fileRenamer = () => {
@@ -22,5 +18,6 @@ module.exports.fileRenamer = () => {
   } catch (err) {
     const error = err && err.message || err
     console.error('While renaming files an error has occurred:', error)
+    throw err
   }
 }

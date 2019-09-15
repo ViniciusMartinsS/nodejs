@@ -2,4 +2,10 @@
 node_modules
 
 # asset files
-assets/tsk_*
+**/tsk_*
+
+#env file
+.env
+
+# package lock
+package-lock.json
