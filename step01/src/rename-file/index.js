@@ -14,6 +14,7 @@ module.exports.fileRenamer = () => {
     }
 
     checkFileNamePattern(renamed[i])
+
     renameSync(fileName, newFileName)
     console.log(`${(i + 1)}º file renamed successfully!\n`)
 
