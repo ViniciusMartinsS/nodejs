@@ -16,4 +16,4 @@ This repository is destined to improve node.js skills diving into specific funct
 
 Mentorship: [Fellipe Capelli](https://github.com/fecaps)
 
-<img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png">
+<img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png" width="700" height="300" >
