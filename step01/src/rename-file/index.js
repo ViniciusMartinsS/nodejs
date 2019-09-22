@@ -1,19 +1,23 @@
 'use strict'
 
-const { appendFileSync, renameSync } = require('fs')
-const { checkExistence, checkFileNamePattern } = require('../utils')
+const { appendFileSync, existsSync, renameSync } = require('fs')
+const { checkFileNamePattern } = require('../utils')
 const { append, files, prefix, renamed } = require('./fields')
-const fileErr = { status: false, message: 'File does not exist!' }
 
 module.exports.fileRenamer = () => {
   for (let i = 0; i < 2; i++) {
-    const exists = checkExistence(`${prefix}/${files[i]}.txt`)
-    if (!exists) throw fileErr
+    const fileName = `${prefix}/${files[i]}.txt`
+    const newFileName = `${prefix}/${renamed[i]}.txt`
+
+    if (!existsSync(fileName)) {
+      throw new Error('File does not exist!')
+    }
 
     checkFileNamePattern(renamed[i])
-    renameSync(`${prefix}/${files[i]}.txt`, `${prefix}/${renamed[i]}.txt`)
+    renameSync(fileName, newFileName)
+    console.log(`${(i + 1)}º file renamed successfully!\n`)
 
-    appendFileSync(`${prefix}/${renamed[i]}.txt`, append)
-    console.log(`${(i + 1)}º renamed successfully!`)
+    appendFileSync(newFileName, append)
+    console.log(`Some more data were appended to ${(i + 1)}º file!\n`)
   }
 }

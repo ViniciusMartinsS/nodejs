@@ -19,6 +19,7 @@ directoryCreator()
       status: false,
       message: err && err.message && err.message || err
     }
+
     console.log(error)
     return error
   })

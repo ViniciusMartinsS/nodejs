@@ -8,5 +8,6 @@ module.exports.fileListener = async () => {
     const response = readFileSync(`${prefix}/${files[i]}`, 'utf8')
     console.log(`Content of ${(i + 1)}º file: `)
     console.dir(response, { depth: null })
+    console.log(`End content\n`)
   }
 }
