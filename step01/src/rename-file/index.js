@@ -12,6 +12,7 @@ module.exports.fileRenamer = () => {
 
     checkFileNamePattern(renamed[i])
     renameSync(`${prefix}/${files[i]}.txt`, `${prefix}/${renamed[i]}.txt`)
+
     appendFileSync(`${prefix}/${renamed[i]}.txt`, append)
     console.log(`${(i + 1)}º renamed successfully!`)
   }

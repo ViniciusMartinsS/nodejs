@@ -2,10 +2,13 @@
 
 const { config } = require('dotenv')
 config()
-const { directoryCreator } = require('./src/create-directory')
-const { fileCreator } = require('./src/create-file')
-const { fileListener } = require('./src/listen-file')
-const { fileRenamer } = require('./src/rename-file')
+
+const {
+  directoryCreator,
+  fileCreator,
+  fileListener,
+  fileRenamer
+} = require('./src')
 
 directoryCreator()
   .then(() => fileCreator())

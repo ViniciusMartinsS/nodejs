@@ -1,11 +1,11 @@
 # node_modules
-node_modules
+step01/node_modules
 
 # asset files
-**/tsk_*
+step01/**/tsk_*
 
 #env file
-.env
+step01/.env
 
 # package lock
-package-lock.json
+step01/package-lock.json
