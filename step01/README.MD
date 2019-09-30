@@ -16,7 +16,7 @@ Once you've cloned the project, on bash, inside the project directory, run the f
 $ npm i
 ```
 
-<b> Before executing project, you should add a .env file based on .env.dist to define customized name of folders & archives. In case you do not define it, the project is going to get default names. <b>
+<b> Before executing project, you should add a .env file based on .env.dist to define customized name of folders & archives. In case you do not define it, the project is going to get default names. </b>
 
 Once you've created .env file, to execute the chain described on the brief above, run the following command:
 
