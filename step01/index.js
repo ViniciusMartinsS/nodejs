@@ -17,7 +17,7 @@ directoryCreator()
   .catch(err => {
     const error = {
       status: false,
-      message: err && err.message && err.message || err
+      message: err && err.message || err
     }
 
     console.log(error)
