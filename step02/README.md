@@ -42,7 +42,7 @@ console.log(a.add) // Output => undefined
 console.log(a) // Output => 'String'
 
 b.add = 'String Addition'
-console.log(a.add) // Output => 'String Addition'
+console.log(b.add) // Output => 'String Addition'
 console.log(b) // { [String: 'String'] add: 'String Addition' }
 
 a == b // Returns => true
