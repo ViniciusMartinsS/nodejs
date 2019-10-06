@@ -7,18 +7,18 @@ const SECOND_FILE_NAME = ENV.STEP01_SECOND_FILE_NAME || 'tsk_second_noenv'
 
 const prefix = `${__dirname}/../${FOLDER_NAME}`
 
-const content = {
-  0: {
+const content = [
+  {
     path: `${prefix}/${FIRST_FILE_NAME}.txt`,
     message: `Hi, I'm Vinicius... This is ma first "Hello Word" file!`,
     file_name: FIRST_FILE_NAME
   },
-  1: {
+  {
     path: `${prefix}/${SECOND_FILE_NAME}.txt`,
     message: `Hey, It's Vinicius again... This is ma second "Hello Word" file!`,
     file_name: SECOND_FILE_NAME
   }
-}
+]
 
 module.exports = {
   content,
