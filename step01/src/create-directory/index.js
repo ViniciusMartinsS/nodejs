@@ -2,7 +2,8 @@
 
 const { existsSync, mkdirSync } = require('fs')
 
-const FOLDER_NAME = process.env.FOLDER_NAME || 'assets'
+const ENV = process.env
+const FOLDER_NAME = ENV.STEP01_FOLDER_NAME || 'assets'
 const folderPath = `${__dirname}/../${FOLDER_NAME}`
 
 module.exports.directoryCreator = async () => {

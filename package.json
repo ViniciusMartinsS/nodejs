@@ -4,8 +4,7 @@
   "description": "Working with node js file system",
   "main": "index.js",
   "scripts": {
-    "project": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "step01": "node step01/index.js"
   },
   "author": "Vinicius Martins",
   "license": "ISC",

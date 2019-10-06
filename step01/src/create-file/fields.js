@@ -1,8 +1,9 @@
 'use strict'
 
-const FOLDER_NAME = process.env.FOLDER_NAME || 'assets'
-const FIRST_FILE_NAME = process.env.FIRST_FILE_NAME || 'tsk_first_noenv'
-const SECOND_FILE_NAME = process.env.SECOND_FILE_NAME || 'tsk_second_noenv'
+const ENV = process.env
+const FOLDER_NAME = ENV.STEP01_FOLDER_NAME || 'assets'
+const FIRST_FILE_NAME = ENV.STEP01_FIRST_FILE_NAME || 'tsk_first_noenv'
+const SECOND_FILE_NAME = ENV.STEP01_SECOND_FILE_NAME || 'tsk_second_noenv'
 
 const prefix = `${__dirname}/../${FOLDER_NAME}`
 
