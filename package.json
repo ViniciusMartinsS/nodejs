@@ -4,7 +4,8 @@
   "description": "Working with node js file system",
   "main": "index.js",
   "scripts": {
-    "step01": "node step01/index.js"
+    "step01": "node step01/index.js",
+    "step02": "node step02/index.js"
   },
   "author": "Vinicius Martins",
   "license": "ISC",
