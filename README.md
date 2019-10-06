@@ -6,7 +6,7 @@ This repository is destined to improve node.js skills diving into specific funct
 
 ### Steps
  - [fs/path modules](https://github.com/ViniciusMartinsS/nodejs/tree/master/step01)
- - [JavaScript Data Structures](https://github.com/ViniciusMartinsS/nodejs)
+ - [JavaScript Data Structures](https://github.com/ViniciusMartinsS/nodejs/tree/master/step02)
  - [Event Loop](https://github.com/ViniciusMartinsS/nodejs)
  - [Blocking Code/Asynchronous](https://github.com/ViniciusMartinsS/nodejs)
  - [Event Emitter](https://github.com/ViniciusMartinsS/nodejs)
