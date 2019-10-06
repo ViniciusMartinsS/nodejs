@@ -16,7 +16,21 @@ Once you've cloned the project, on bash, inside the project directory, run the f
 $ npm i
 ```
 
-To execute the chain described above, run the following command:
+### Environment Variables
+
+<b> Before executing the project, you should add a .env file based on .env.dist example to define customized name of folders & archives. In case you do not create it, the project is going to get default names. </b>
+
+```
+FOLDER_NAME
+FIRST_FILE_NAME # Must start with "tsk_"
+SECOND_FILE_NAME # Must start with "tsk_"
+RENAME_FIRST_FILE # Must start with "tsk_"
+RENAME_SECOND_FILE # Must start with "tsk_"
+```
+
+### Running Project
+
+Once you've created .env file, to execute the chain described on the brief above, run the following command:
 
 ```
 $ npm run project
