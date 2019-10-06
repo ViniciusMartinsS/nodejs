@@ -19,9 +19,9 @@ Everything else in javascript is an object type.
 
 ### Object Types
 
-The following types are in the object types list even though they are in the primitive list as well.
+The following types are in the <b>object types list</b> even though they are in the <b>primitive list</b> as well.
 
-So these are some of the object types of javascript:
+So, these are some of the object types of javascript:
 - Boolean
 - Number
 - String
@@ -42,7 +42,7 @@ console.log(a.add) // Output => undefined
 console.log(a) // Output => 'String'
 
 b.add = 'String Addition'
-console.log(a.add) // Output => 'String Addition'
+console.log(b.add) // Output => 'String Addition'
 console.log(b) // { [String: 'String'] add: 'String Addition' }
 
 a == b // Returns => true
