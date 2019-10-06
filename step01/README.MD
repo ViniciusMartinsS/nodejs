@@ -8,24 +8,16 @@ In this small project, we've worked with fs module functions for creating direct
 We've also managed to listen those created files. <br>
 At last we've renamed those files and appended some more data to it.
 
-### Installing
-
-Once you've cloned the project, on bash, inside the project directory, run the following command:
-
-```
-$ npm i
-```
-
 ### Environment Variables
 
 <b> Before executing the project, you should add a .env file based on .env.dist example to define customized name of folders & archives. In case you do not create it, the project is going to get default names. </b>
 
 ```
 FOLDER_NAME
-FIRST_FILE_NAME # Must start with "tsk_"
-SECOND_FILE_NAME # Must start with "tsk_"
-RENAME_FIRST_FILE # Must start with "tsk_"
-RENAME_SECOND_FILE # Must start with "tsk_"
+STEP01_FIRST_FILE_NAME # Must start with "tsk_"
+STEP01_SECOND_FILE_NAME # Must start with "tsk_"
+STEP01_RENAME_FIRST_FILE # Must start with "tsk_"
+STEP01_RENAME_SECOND_FILE # Must start with "tsk_"
 ```
 
 ### Running Project
@@ -33,7 +25,7 @@ RENAME_SECOND_FILE # Must start with "tsk_"
 Once you've created .env file, to execute the chain described on the brief above, run the following command:
 
 ```
-$ npm run project
+$ npm run step01
 ```
 
 ### Doubts
