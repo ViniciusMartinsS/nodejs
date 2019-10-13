@@ -70,13 +70,39 @@ Values always <b>falsy</b>:
 
   <b>TIP</b>: Nice to use "!!" to convert to boolean
 
+  _____
+
+### Memory Usage
+
+To measure nodejs process execution, we use the following command:
+
+```js
+process.memoryUsage()
+```
+
+This method returns an object with the following properties:
+
+```
+{
+  rss: value in bytes,
+  heapTotal: value in bytes,
+  heapUsed: value in bytes,
+  external: value in bytes
+}
+```
+
+I'd like to highlight this explanation of devdocs about the returned object:
+
+<b> heapTotal and heapUsed refer to V8's memory usage. external refers to the memory usage of C++ objects bound to JavaScript objects managed by V8. rss, Resident Set Size, is the amount of space occupied in the main memory device (that is a subset of the total allocated memory) for the process, which includes the heap, code segment and stack. </b>
 
 ### Research
 
 Sources:
 - [Medium Post | Primitive/Object](https://codeburst.io/javascript-essentials-types-data-structures-3ac039f9877b)
 - [Site Point Post | Truthy/Falsy](https://www.sitepoint.com/javascript-truthy-falsy/)
+
 ### Doubts
 
 - Not sure if I really got the idea of <b>symbol type</b> on primitive types;
 - Why would I use object type when I do have primitive type?
+- I did not get how WeakSet works. What is the point of using it?

@@ -2,10 +2,13 @@
   "name": "step1",
   "version": "1.0.0",
   "description": "Working with node js file system",
+  "engines": {
+    "node": ">=8.10.0"
+  },
   "main": "index.js",
   "scripts": {
     "step01": "node step01/index.js",
-    "step02": "node step02/index.js"
+    "step02": "node step02/$METHOD.js"
   },
   "author": "Vinicius Martins",
   "license": "ISC",
