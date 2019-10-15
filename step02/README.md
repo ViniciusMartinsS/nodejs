@@ -1,7 +1,7 @@
 
 # JavaScript Data Structures
 
-Running Project
+### Running Project
 
 ```
 $ METHOD=set npm run step02
