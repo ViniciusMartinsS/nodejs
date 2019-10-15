@@ -1,6 +1,13 @@
 
 # JavaScript Data Structures
 
+Running Project
+
+```
+$ METHOD=set npm run step02
+$ METHOD=map npm run step02
+``` 
+
 ### Primitive Types
 
 Once we talk about primitive types, we can say they are not
