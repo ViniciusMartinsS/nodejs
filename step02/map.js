@@ -9,7 +9,9 @@ async function mapWayMethod () {
 
   const arrayOfFiles = await readdirSync(directory)
 
-  const map = new Map(arrayOfFiles.map((item, i) => ([ `key${i}`, item ])))
+  let mapItems = arrayOfFiles.map((item, i) => ([ `key${i}`, item ]))
+
+  const map = new Map(mapItems)
 
   const memoryUsage = process.memoryUsage()
 
@@ -35,6 +37,14 @@ async function mapWayMethod () {
 [must be false because "key0" was removed]:`)
   console.dir(map.has('key0'), { depth: null })
 
+  mapItems = null
+
+  console.log('\nGenerated Map Keys after resetting "mapItems": ')
+  console.dir([ ...map.keys() ], { depth: null })
+
+  console.log('\nGenerated Map Values after resetting "mapItems": ')
+  console.dir([ ...map.values() ], { depth: null })
+
   console.log('\nMemory Usage Inside Map Method')
   console.log(`heapUsed/V8's memory: ${memoryUsage.heapUsed / 1024 / 1024} megabytes`)
   console.log(`Device memory: ${memoryUsage.rss / 1024 / 1024} megabytes`)
@@ -50,8 +60,8 @@ async function weakMapWayMethod (arrayOfFiles) {
   const weakMapInstance = new WeakMap()
   const arrayOfWeakMap = [ ...arrayOfFiles ]
 
-  const weakMapObjEvenNumbers = {}
-  const weakMapObjOddNumbers = {}
+  let weakMapObjEvenNumbers = {}
+  let weakMapObjOddNumbers = {}
 
   for (let i = 0; i < arrayOfWeakMap.length; i++) {
     const weakMapObjOption = i % 2 === 0
@@ -76,11 +86,22 @@ async function weakMapWayMethod (arrayOfFiles) {
   console.dir(weakMapInstance.has({}), { depth: null })
 
   console.log(`\nGet last value from "weakMapObjOddNumbers"
-[it must show the last one because while looping over "arrayOfWeakMap" the "weakMapObjOddNumbers" is overwrite]`)
+[it must show the last one because WeakMap doesn't offer access to more than one item]`)
   console.dir(weakMapInstance.get(weakMapObjOddNumbers))
 
   console.log(`\nGet last value from "weakMapObjEvenNumbers"
-[it must show the last one because while looping over "arrayOfWeakMap" the "weakMapObjEvenNumbers" is overwrite]`)
+[it must show the last one because WeakMap doesn't offer access to more than one item]`)
+  console.dir(weakMapInstance.get(weakMapObjEvenNumbers))
+
+  weakMapObjOddNumbers = null
+  weakMapObjEvenNumbers = null
+
+  console.log(`\nGet last value from "weakMapObjOddNumbers"
+[it must show undefined because we've set "weakMapObjOddNumbers" to null ]`)
+  console.dir(weakMapInstance.get(weakMapObjOddNumbers))
+
+  console.log(`\nGet last value from "weakMapObjEvenNumbers"
+[it must show undefined because we've set "weakMapObjEvenNumbers" to null ]`)
   console.dir(weakMapInstance.get(weakMapObjEvenNumbers))
 
   console.log('\nMemory Usage Inside WeakMap Method')
