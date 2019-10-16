@@ -9,9 +9,11 @@ async function mapWayMethod () {
 
   const arrayOfFiles = await readdirSync(directory)
 
-  let mapItems = arrayOfFiles.map((item, i) => ([ `key${i}`, item ]))
+  const mapItems = arrayOfFiles.map((item, i) => ([ `key${i}`, item ]))
+  let lastKey = {}
 
   const map = new Map(mapItems)
+  map.set(lastKey, {})
 
   const memoryUsage = process.memoryUsage()
 
@@ -37,12 +39,14 @@ async function mapWayMethod () {
 [must be false because "key0" was removed]:`)
   console.dir(map.has('key0'), { depth: null })
 
-  mapItems = null
+  lastKey = null
 
-  console.log('\nGenerated Map Keys after resetting "mapItems": ')
+  console.log(`\nGenerated Map Keys after resetting "lastKey"
+[must have all keys, including "{}"]:`)
   console.dir([ ...map.keys() ], { depth: null })
 
-  console.log('\nGenerated Map Values after resetting "mapItems": ')
+  console.log(`\nGenerated Map Values after resetting "lastKey"
+[must have all values, including "{}"]:`)
   console.dir([ ...map.values() ], { depth: null })
 
   console.log('\nMemory Usage Inside Map Method')
