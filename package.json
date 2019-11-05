@@ -8,7 +8,8 @@
   "main": "index.js",
   "scripts": {
     "step01": "node step01/index.js",
-    "step02": "node step02/$METHOD.js"
+    "step02": "node step02/$METHOD.js",
+    "step03": "node step03/$METHOD.js"
   },
   "author": "Vinicius Martins",
   "license": "ISC",
