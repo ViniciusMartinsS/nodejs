@@ -13,8 +13,8 @@ $ METHOD=set-interval npm run step03
 
 Basically, it is where we are in the program.<br>It is classified as a data structure that records the function calls. <br>
 Once we call a function to execute, we push something on to the stack, and when we return from a function, we pop off the top of the stack.
-
-<img src="./assets/call-stack.gif">
+<br>Also important to say that when call stack identify an async code, it removes from the main stack and send it to the event table. 
+<img src="./assets/call-stack.gif">br
 
 ### Message Queue
 
@@ -33,6 +33,9 @@ It is a Javascript engine, written in c++, developed by Google. <br >Basically, 
 - The V8 engine can run standalone we can embed it with our own C++ program.
 
 <img src="./assets/v8.png">
+
+### How is nodejs capable of working like multi thread?
+Event loop can be run by different threads, so this was it works like multi thread.
 
 ### Set Timeout
 
